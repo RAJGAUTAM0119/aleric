@@ -1,16 +1,5 @@
-// import Image from "next/image";
 import style from "./Demo.module.css";
-// import demoImage1 from "../../../../public/images/demoImage1.webp";
-// import demoImage2 from "../../../../public/images/demoImage2.webp";
-// import demoImage3 from "../../../../public/images/demoImage3.webp";
-// import demoImage4 from "../../../../public/images/demoImage4.webp";
 
-// const images = [
-//   { imageSrc: demoImage1 },
-//   { imageSrc: demoImage2 },
-//   { imageSrc: demoImage3 },
-//   { imageSrc: demoImage4 },
-// ];
 
 const imageSection = [
   { name: "image1", para: "BRAND PROMOTION" },

@@ -5,6 +5,15 @@ import logo from "../../../../public/images/logo-black.webp";
 import Link from "next/link";
 import { useState } from "react";
 
+const navlinks = [
+  { link: "HOME" },
+  { link: "PAGES" },
+  { link: "PROJECTS" },
+  { link: "BLOG" },
+  { link: "SHOP" },
+  { link: "CONTACTS" },
+];
+
 const Megamenu = () => {
   const [isClick, setClick] = useState(false);
 
@@ -41,24 +50,16 @@ const Megamenu = () => {
               className={`absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] flex flex-col items-center justify-center`}
             >
               <ul>
-                <li className={`text-4xl font-[600] ${style.navlinks}`}>
-                  <Link href="/">Home</Link>
-                </li>
-                <li className={`text-4xl font-[600] ${style.navlinks}`}>
-                  <Link href="/">Pages</Link>
-                </li>
-                <li className={`text-4xl font-[600] ${style.navlinks}`}>
-                  <Link href="/">Projects</Link>
-                </li>
-                <li className={`text-4xl font-[600] ${style.navlinks}`}>
-                  <Link href="/">Blog</Link>
-                </li>
-                <li className={`text-4xl font-[600] ${style.navlinks}`}>
-                  <Link href="/">Shop</Link>
-                </li>
-                <li className={`text-4xl font-[600] ${style.navlinks}`}>
-                  <Link href="/">Contacts</Link>
-                </li>
+                {navlinks.map((items, index) => {
+                  return (
+                    <li
+                      key={index}
+                      className={`text-4xl font-[600] ${style.navlinks}`}
+                    >
+                      <Link href="/">{items.link}</Link>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>

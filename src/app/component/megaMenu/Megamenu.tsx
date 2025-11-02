@@ -4,6 +4,14 @@ import style from "./Megamenu.module.css";
 import logo from "../../../../public/images/logo-black.webp";
 import Link from "next/link";
 import { useState } from "react";
+const navlinks = [
+  { link: "HOME" },
+  { link: "PAGES" },
+  { link: "PROJECTS" },
+  { link: "BLOG" },
+  { link: "SHOP" },
+  { link: "CONTACTS" },
+];
 
 const Megamenu = () => {
   const [isClick, setClick] = useState(false);
@@ -21,7 +29,7 @@ const Megamenu = () => {
         <div>
           <button
             onClick={handleClick}
-            className="text-3xl absolute top-0 right-[500px] text-black z-40"
+            className="text-3xl absolute top-10 right-[450px] text-black z-40"
           >
             X
           </button>
@@ -41,49 +49,33 @@ const Megamenu = () => {
               className={`absolute top-20 left-48 flex flex-col items-center justify-center`}
             >
               <ul>
-                <li className={`text-6xl font-[600] ${style.navlinks}`}>
-                  <Link href="/">Home</Link>
-                </li>
-                <li className={`text-6xl font-[600] ${style.navlinks}`}>
-                  <Link href="/">Pages</Link>
-                </li>
-                <li className={`text-6xl font-[600] ${style.navlinks}`}>
-                  <Link href="/">Projects</Link>
-                </li>
-                <li className={`text-6xl font-[600] ${style.navlinks}`}>
-                  <Link href="/">Blog</Link>
-                </li>
-                <li className={`text-6xl font-[600] ${style.navlinks}`}>
-                  <Link href="/">Shop</Link>
-                </li>
-                <li className={`text-6xl font-[600] ${style.navlinks}`}>
-                  <Link href="/">Contacts</Link>
-                </li>
+                {navlinks.map((items, index) => {
+                  return (
+                    <li
+                      key={index}
+                      className={`text-6xl font-[600] ${style.navlinks}`}
+                    >
+                      <Link href="/">{items.link}</Link>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>
           <div
             className={`${style.megamenuContact} z-40 hidden lg:flex lg:flex-col lg:text-black absolute top-20 -right-[73px]`}
           >
-            <ul>
-              <li className={`text-6xl font-[600] ${style.navlinks}`}>
-                <Link href="/">Home</Link>
-              </li>
-              <li className={`text-6xl font-[600] ${style.navlinks}`}>
-                <Link href="/">Pages</Link>
-              </li>
-              <li className={`text-6xl font-[600] ${style.navlinks}`}>
-                <Link href="/">Projects</Link>
-              </li>
-              <li className={`text-6xl font-[600] ${style.navlinks}`}>
-                <Link href="/">Blog</Link>
-              </li>
-              <li className={`text-6xl font-[600] ${style.navlinks}`}>
-                <Link href="/">Shop</Link>
-              </li>
-              <li className={`text-6xl font-[600] ${style.navlinks}`}>
-                <Link href="/">Contacts</Link>
-              </li>
+            <ul className=" p-[50px]">
+              {navlinks.map((items, index) => {
+                return (
+                  <li
+                    key={index}
+                    className={`text-5xl  font-[600] ${style.navlinks}`}
+                  >
+                    <Link href="/">{items.link}</Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
