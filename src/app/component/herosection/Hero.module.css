@@ -1,0 +1,29 @@
+.heroSection {
+  width: auto;
+  height: 950px;
+  background-size: 75%;
+  background-image: url(../../../../public/images/photographerHeroImage.webp);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-color: #11121449;
+  background-blend-mode: color;
+  filter: contrast(1.1);
+
+  @media (max-width: 640px) {
+    width: auto;
+    height: 100dvh;
+    background-size: 95%;
+    background-image: url(../../../../public/images/photographerHeroImage.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #11121449;
+    background-blend-mode: color;
+    filter: contrast(1.1);
+  }
+}
+
+.heading {
+  span {
+    text-shadow: 0px 0px 120px #000000;
+  }
+}

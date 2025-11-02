@@ -1,0 +1,17 @@
+.mySwiper {
+  margin: 20px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  animation: 4s mySwiper linear infinite normal;
+}
+
+@keyframes mySwiper {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(calc(-200% - 128px));
+  }
+}

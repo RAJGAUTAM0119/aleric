@@ -1,0 +1,44 @@
+.megamenu {
+  width: 66dvw;
+  z-index: 3;
+  transition: 1s ease;
+  animation: dropdown 1s cubic-bezier(1, 0.02, 0, 0.97) forwards;
+}
+@keyframes dropdown {
+  0% {
+    min-height: 0dvh;
+  }
+  100% {
+    min-height: 100dvh;
+  }
+}
+
+.megamenuContact {
+  width: 33dvw;
+  z-index: 3;
+  background: #747474;
+  transition: 1s ease;
+  animation: upWard 1s cubic-bezier(1, 0.02, 0, 0.97) forwards;
+}
+@keyframes upWard {
+  0% {
+    min-height: 0dvh;
+  }
+  100% {
+    min-height: 100dvh;
+  }
+}
+
+.navlinks {
+  opacity: 0;
+  padding: 15px 0px;
+  animation: navlink 2s 1s ease forwards;
+}
+@keyframes navlink {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
